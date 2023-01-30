@@ -1,0 +1,71 @@
+<div class="div_content_center">
+    <br>
+    <h2>Register</h2>
+    <form action="" [formGroup]="registerForm" (ngSubmit)="save()">
+        <div class="div_content_center">
+            <br>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Name</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" formControlName="Name" class="inp_styles form-control"
+                        placeholder="Name (required)"
+                        [ngClass]="{'is-invalid': (registerForm.get('Name')?.touched || registerForm.get('Name')?.dirty) && !registerForm.get('Name')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="registerForm.get('Name')?.errors?.['required']">Name can't be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Email</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" formControlName="Email" class="inp_styles form-control"
+                        placeholder="Email (required)"
+                        [ngClass]="{'is-invalid': (registerForm.get('Email')?.touched || registerForm.get('Email')?.dirty) && !registerForm.get('Email')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="registerForm.get('Email')?.errors?.['required']">Email can't be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Password</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="Password" formControlName="Password" class="inp_styles form-control"
+                        placeholder="Password (required)"
+                        [ngClass]="{'is-invalid': (registerForm.get('Password')?.touched || registerForm.get('Password')?.dirty) && !registerForm.get('Password')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="registerForm.get('Password')?.errors?.['required']">Password can't be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Confirm Password</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="Password" formControlName="confirmPassword" class="inp_styles form-control"
+                        placeholder="Confirm Password (required)"
+                        [ngClass]="{'is-invalid': (registerForm.get('confirmPassword')?.touched || registerForm.get('confirmPassword')?.dirty) && !registerForm.get('confirmPassword')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm Password can't
+                            be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <input type="submit" value="Register" class="std_btn" [disabled]="!registerForm.valid">
+        </div>
+    </form>
+</div>

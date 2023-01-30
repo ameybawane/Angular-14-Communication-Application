@@ -1,0 +1,85 @@
+.modal_outer_border {
+    border: 2px solid black;
+}
+
+.cmn_btn:hover {
+    border: 2px solid #0000ff;
+}
+
+.inr_modal_cont {
+    display: inline-block;
+    height: 50px;
+    margin: 30px;
+    padding: 2px;
+}
+
+.inr_modal_cont_icon .inr_modal_cont_txt {
+    line-height: 30px;
+}
+
+.inr_modal_cont_icon {
+    vertical-align: middle;
+    font-size: 45px;
+}
+
+.tbl_th {
+    background-color: #cccccc;
+}
+
+table tr {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-collapse: collapse;
+}
+
+table th {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: none;
+}
+
+table td {
+    border-left: 2px solid #000;
+}
+
+table tr:last-child {
+    border-bottom: 2px solid #000;
+}
+
+.tbl_alg_cent {
+    text-align: center;
+}
+
+.tb_file_desc_cont {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 95%;
+}
+
+.file_uploader {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 95%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-control {
+    border: 2px solid;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+input:disabled {
+    background-color: #97929248;
+    cursor: not-allowed;
+}

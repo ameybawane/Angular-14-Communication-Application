@@ -1,0 +1,87 @@
+.inr_modal {
+    border-bottom: 2px solid black;
+}
+
+.modal_footer {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal_outer_border {
+    border: 2px solid black;
+}
+
+.modal_title {
+    text-align: center;
+    width: 100%;
+}
+
+.modal_close_btn {
+    color: #000;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.tb_user_inp_msg {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 100%;
+}
+
+.tbl_group_chat {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+tr,
+td {
+    border: none;
+}
+
+table tr td {
+    font-weight: normal;
+    text-align: left;
+}
+
+.cmn_group_chat_btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 95%;
+}
+
+.cmn_group_chat_btn:hover {
+    border: 2px solid #0000ff;
+}
+
+.modal_header_cont {
+    border-bottom: 2px solid #000;
+    padding: 5px 5px 5px 5px;
+}
+
+.form-control {
+    border: 2px solid;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+input:disabled {
+    background-color: #97929248;
+    cursor: not-allowed;
+}
+
+.tbl_scroll {
+    height: 250px;
+    overflow-y: scroll;
+}

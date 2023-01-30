@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+.nav_bg_clr {
+    background-color: #bfbfbf;
+}
+
+.std_btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: #6DFAFB;
+    cursor: pointer;
+}
+
+.div_content_center {
+    text-align: center
+}
+
+.cmn_btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.form_lbl {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.inp_styles {
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.mb_div {
+    margin-bottom: 25px;
+}
+
+.inr_modal {
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal_footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.modal_title {
+    text-align: center;
+    width: 100%;
+}
+
+.modal_close_btn {
+    color: #000;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+}

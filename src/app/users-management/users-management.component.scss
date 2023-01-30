@@ -1,0 +1,72 @@
+.modal_outer_border {
+    border: 2px solid black;
+}
+
+.modal_header {
+    border-bottom: 2px solid black;
+    padding: 10px 0 10px 0;
+
+}
+
+.cmn_btn:hover {
+    border: 2px solid #0000ff;
+}
+
+.inr_modal_cont {
+    display: inline-block;
+    height: 50px;
+    margin: 30px;
+    padding: 2px;
+}
+
+.inr_modal_cont_icon .inr_modal_cont_txt {
+    line-height: 30px;
+}
+
+.inr_modal_cont_icon {
+    vertical-align: middle;
+    font-size: 45px;
+}
+
+.tbl_Th {
+    background-color: #cccccc;
+}
+
+table tr {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-collapse: collapse;
+}
+
+table th {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: none;
+}
+
+table td {
+    border-left: 2px solid #000;
+}
+
+table tr:last-child {
+    border-bottom: 2px solid #000;
+}
+
+.tbl_alg_cent {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.user_mgt_btn {
+    color: blue;
+    border: none;
+    background-color: transparent;
+}
+
+button:disabled {
+    color: #4e4b4b48;
+    cursor: not-allowed;
+}

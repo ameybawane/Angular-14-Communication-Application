@@ -1,0 +1,40 @@
+<div class="div_content_center">
+    <br>
+    <h2>Login</h2>
+    <form action="" [formGroup]="loginForm" (ngSubmit)="checkLogin()">
+        <div class="div_content_center">
+            <br>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Email</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" formControlName="Email" class="inp_styles form-control"
+                        placeholder="Email (required)"
+                        [ngClass]="{'is-invalid': (loginForm.get('Email')?.touched || loginForm.get('Email')?.dirty) && !loginForm.get('Email')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="loginForm.get('Email')?.errors?.['required']">Email can't be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row mb_div">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 form_lbl">
+                    <label>Password</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="password" formControlName="Password" class="inp_styles form-control"
+                        placeholder="Password (required)"
+                        [ngClass]="{'is-invalid': (loginForm.get('Password')?.touched || loginForm.get('Password')?.dirty) && !loginForm.get('Password')?.valid}">
+                    <span class="invalid-feedback">
+                        <span *ngIf="loginForm.get('Password')?.errors?.['required']">Password can't be blank.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <input type="submit" value="Login" class="std_btn" [disabled]="!loginForm.valid">
+        </div>
+    </form>
+</div>

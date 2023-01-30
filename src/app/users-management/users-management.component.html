@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <br>
+    <h2>Users</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="tbl_th">
+                <th width="40%">Name</th>
+                <th width="40%" class="tbl_alg_cent">User Email ID</th>
+                <th width="20%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of userList">
+                <td>{{item.fullName}}</td>
+                <td class="tbl_alg_cent">{{item.email}}</td>
+                <td class="tbl_alg_cent">
+                    <button class="user_mgt_btn" [routerLink]="['/edit',item.id]">Edit</button>&nbsp;|&nbsp;
+                    <button class="user_mgt_btn" id={{item.id}} data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        [disabled]="item.id == name" (click)="getDeleteUserId(item.id,item.fullName)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal_outer_border">
+            <div class="modal-header" style="border-bottom: 2px solid black; padding: 5px 5px 5px 5px;">
+                <h5 class="modal_title">Confirm User Deletion</h5>
+                <button type="button" class="modal_close_btn" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body inr_modal">
+                <div class="inr_modal_cont">
+                    <i class="fa fa-question-circle inr_modal_cont_icon"></i>
+                    <span class="inr_modal_cont_txt">&nbsp;&nbsp;Are you sure ?</span>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button type="submit" (click)="confirmDelete()" data-bs-dismiss="modal" class="cmn_btn">ok</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="cmn_btn" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

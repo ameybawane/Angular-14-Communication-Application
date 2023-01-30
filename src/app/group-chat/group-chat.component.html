@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<br>
+<div class="modal-content modal_outer_border">
+    <div class="modal-header modal_header_cont">
+        <h6 class="modal_title">Group Chat</h6>
+        <button type="button" class="modal_close_btn" data-bs-dismiss="modal" aria-label="Close">X</button>
+    </div>
+    <div class="modal-body inr_modal">
+        <br>
+        <div class="tbl_scroll">
+            <table class="tbl_group_chat">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th width="80%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of allMessages">
+                        <td>[{{item.dateTime | date:'dd/MM/yyyy HH:mm:ss'}}]</td>
+                        <td>{{item.userName}}&nbsp;:</td>
+                        <td>{{item.message}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+    <form action="" [formGroup]="groupChatForm" (ngSubmit)="saveGroupChat()">
+        <div class="row modal_footer">
+            <div class="col-md-2">{{name[0]['logedInUserName']}}</div>
+            <div class="col-md-6">
+                <input type="text" formControlName="Message" class="tb_user_inp_msg form-control"
+                    placeholder="Message (required)"
+                    [ngClass]="{'is-invalid': (groupChatForm.get('Message')?.touched || groupChatForm.get('Message')?.dirty) && !groupChatForm.get('Message')?.valid}">
+                <span class="invalid-feedback">
+                    <span *ngIf="groupChatForm.get('Message')?.errors?.['required']">Message can't be blank.</span>
+                </span>
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Send" class="cmn_group_chat_btn" [disabled]="!groupChatForm.valid">
+            </div>
+            <div class="col-md-2">
+                <button type="reset" class="cmn_group_chat_btn">Refresh</button>
+            </div>
+        </div>
+    </form>
+</div>
