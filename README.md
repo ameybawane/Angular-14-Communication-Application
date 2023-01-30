@@ -1,4 +1,4 @@
-Project - Communication Application 
+# Project - Communication Application 
 
 1. Create below Components and UI ready
 
@@ -77,17 +77,14 @@ Users Management
 
 10. When user click on delete, delete user from users localstorage.
 
-Manage documents 
+11. When user click on logout remove loggedIn users from localstorage. 
 
-11. Display list of uploads from uploads localstorage
-12. Allow users to edit upload using localstorage.
-13. When user click on delete upload, delete from uploads localstorage.
-14. When user click on logout remove loggedIn users from localstorage. 
-15. Only logged in user can access internal pages else redirect to login page.
-16. Implement Angular routing feature.
+12. Only logged in user can access internal pages else redirect to login page.
+
+13. Implement Angular routing feature.
 
 
-Note:
+# Note:
 
 User Angular Reactive Form 
 Angular Routing 
@@ -98,9 +95,6 @@ Use interface for data type
 Try to use angular lifecycle 
 SCSS for styles 
 
-# Dashboard
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
 # Development server
 
